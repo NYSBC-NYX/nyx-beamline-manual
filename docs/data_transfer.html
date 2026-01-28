@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>NYX Documentation &#8212; NYX Documentation  documentation</title>
+    <title>2. Data Transfer &#8212; NYX Documentation  documentation</title>
   
   
   
@@ -40,10 +40,11 @@
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'data_transfer';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Shipping Samples to NYX" href="shipping.html" />
+    <link rel="next" title="3. Acknowledgements" href="acknowledgement.html" />
+    <link rel="prev" title="1. Shipping Samples to NYX" href="shipping.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -106,8 +107,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -126,7 +125,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -156,9 +155,9 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="shipping.html">1. Shipping Samples to NYX</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data_transfer.html">2. Data Transfer</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Data Transfer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">3. Acknowledgements</a></li>
 </ul>
 
@@ -214,7 +213,7 @@
       
       
       
-      <li><a href="_sources/index.rst" target="_blank"
+      <li><a href="_sources/data_transfer.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -285,7 +284,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -296,11 +297,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>NYX Documentation</h1>
+    <h1>Data Transfer</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-data">2.1. Downloading data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sftp-client">2.1.1. SFTP Client</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-short-version">2.1.2. The Short Version</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-data-with-globus">2.2. Accessing data with Globus</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -310,26 +324,102 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="nyx-documentation">
-<h1>NYX Documentation<a class="headerlink" href="#nyx-documentation" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
+  <section id="data-transfer">
+<h1><span class="section-number">2. </span>Data Transfer<a class="headerlink" href="#data-transfer" title="Link to this heading">#</a></h1>
+<p>All user data is written to central storage. Access to your data requires
+authentication using your BNL domain account. If your BNL guest appointment
+expires, you will lose access to your data and will then have to renew your
+guest appointment.</p>
+<p>Data can be downloaded using either Globus or with sftp.</p>
+<p>NSLS-II now offers a new-and-improved Globus endpoint, conveniently accessible in your
+web browser at <a class="reference external" href="https://globus.nsls2.bnl.gov">globus.nsls2.bnl.gov</a>.</p>
+<section id="downloading-data">
+<h2><span class="section-number">2.1. </span>Downloading data<a class="headerlink" href="#downloading-data" title="Link to this heading">#</a></h2>
+<section id="sftp-client">
+<h3><span class="section-number">2.1.1. </span>SFTP Client<a class="headerlink" href="#sftp-client" title="Link to this heading">#</a></h3>
+<p>You will need an sftp client.</p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="shipping.html">1. Shipping Samples to NYX</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data_transfer.html">2. Data Transfer</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="data_transfer.html#downloading-data">2.1. Downloading data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_transfer.html#accessing-data-with-globus">2.2. Accessing data with Globus</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">3. Acknowledgements</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="acknowledgement.html#nyx-acknowledgement">3.1. NYX Acknowledgement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="acknowledgement.html#nsls-ii-acknowledgement">3.2. NSLS-II Acknowledgement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="acknowledgement.html#eiger2-acknowledgement">3.3. Eiger2 Acknowledgement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="acknowledgement.html#eiger2-acknowledgement-for-pdb">3.4. Eiger2 Acknowledgement for PDB</a></li>
-</ul>
-</li>
-</ul>
+<li><p><strong>Cross-platform:</strong> <a class="reference external" href="https://filezilla-project.org/">FileZilla</a>.
+This is a free program available for Windows, Apple, and Linux.  The
+explanation below will be made using FileZilla.</p></li>
+<li><p><strong>Windows users:</strong> A popular option is <a class="reference external" href="https://winscp.net/eng/index.php">WinSCP</a>. Be careful at the WinSCP
+website.  You will see multiple pop-up adds with download links to
+other software packages.  Be careful to click on the link to the
+WinSCP package.</p></li>
+<li><p><strong>Mac users:</strong> Other options are <a class="reference external" href="https://termius.com/download/macos">Termius</a>
+and <a class="reference external" href="http://fivedetails.com/flow/">Flow</a>.</p></li>
+<li><p><strong>Linux users:</strong> Your desktop file manager likely has an sftp client
+built in.  Try typing
+<code class="docutils literal notranslate"><span class="pre">sftp://&lt;username&gt;&#64;sftp.nsls2.bnl.gov</span></code> into your file
+manager or create a new network drive using <code class="docutils literal notranslate"><span class="pre">ssh</span></code> and
+<code class="docutils literal notranslate"><span class="pre">sftp.nsls2.bnl.gov</span></code>.</p>
+<p><a class="reference external" href="https://github.com/libfuse/sshfs">sshfs</a> is an
+excellent solution.  <code class="docutils literal notranslate"><span class="pre">sshfs</span></code> allows you to easily
+mount the remote sftp site to a local mount point,
+allowing you to browse the remote site as if it were a
+local folder.  For example, the following can be done to mount
+the data folder locally:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sshfs<span class="w"> </span>johndoe@sftp.nsls2.bnl.gov:/nsls2/data/nyx<span class="w"> </span>~/mnt/nyx<span class="w"> </span>-o<span class="w"> </span>follow_symlinks
+</pre></div>
 </div>
+<p>and this to unmount the data folder</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fusermount<span class="w"> </span>-u<span class="w"> </span>mnt/nyx
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="the-short-version">
+<h3><span class="section-number">2.1.2. </span>The Short Version<a class="headerlink" href="#the-short-version" title="Link to this heading">#</a></h3>
+<div class="admonition-executive-summary admonition">
+<p class="admonition-title">Executive Summary</p>
+<ol class="arabic simple">
+<li><p>Connect to sftp.nsls2.bnl.gov in your sftp client</p></li>
+<li><p>Authenticate using your BNL username/password and DUO two-factor
+authentication</p></li>
+<li><p>Navigate to <code class="docutils literal notranslate"><span class="pre">/nsls2/data/nyx/proposals/</span></code>, then to the cycle
+folder corresponding to the date of your experiment, then to the
+folder with your proposal number.  So, something like
+<code class="docutils literal notranslate"><span class="pre">/nsls2/data/nyx/proposals/2026-1/pass-123456</span></code>.</p></li>
+<li><p>Transfer your data to your local computer.</p></li>
+</ol>
+</div>
+</section>
+</section>
+<section id="accessing-data-with-globus">
+<h2><span class="section-number">2.2. </span>Accessing data with Globus<a class="headerlink" href="#accessing-data-with-globus" title="Link to this heading">#</a></h2>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>Your institution may block Globus as part of their IT policy. If this is the
+case, you will need to work with your institute IT for a policy exception.</p>
+</div>
+<p>If an institutional endpoint is available, Globus may be the best option
+for retrieving your data from NYX.</p>
+<p>To use Globus, you must transfer data to a Globus endpoint to which you have
+access. This endpoint can be institutionally managed or a personal endpoint on
+your computer.</p>
+<p>If you are transferring data to your computer, you will need to use
+<a class="reference external" href="https://app.globus.org/collections/gcp">Globus Connect Personal (GCP)</a>.
+Follow the download and installation instructions and start an
+instance of GCP on your computer.</p>
+<p>Once you have identified either an institutional endpoint or you have
+GCP running, point your web browser at <a class="reference external" href="http://globus.nsls2.bnl.gov/">http://globus.nsls2.bnl.gov/</a>.</p>
+<p>In the Globus file manager panel, navigate to your
+proposal directory, which will be something like
+<code class="docutils literal notranslate"><span class="pre">/nsls2/data/nyx/proposals/2026-1/pass-123456</span></code>, and
+replace <code class="docutils literal notranslate"><span class="pre">2026-1</span></code> with the operations cycle of your visit to NYX and
+replace <code class="docutils literal notranslate"><span class="pre">123456</span></code> with the proposal number of your experiment.</p>
+<figure class="align-center" id="id1">
+<img alt="_images/globus.png" class="my-5" src="_images/globus.png" />
+<figcaption>
+<p><span class="caption-number">Figure 2.1 </span><span class="caption-text">Globus navigation at NSLS-II</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In the local panel on the right side of the page, navigate to the
+location to which you want to download your data.</p>
+<p>Select the data (or data folder) you wish to download and hit the
+start button above the remote folder.</p>
+</section>
 </section>
 
 
@@ -343,12 +433,21 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
+    <a class="left-prev"
        href="shipping.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Shipping Samples to NYX</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="acknowledgement.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Shipping Samples to NYX</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Acknowledgements</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -358,6 +457,26 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-data">2.1. Downloading data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sftp-client">2.1.1. SFTP Client</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-short-version">2.1.2. The Short Version</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-data-with-globus">2.2. Accessing data with Globus</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

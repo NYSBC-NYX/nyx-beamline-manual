@@ -8,7 +8,7 @@
 
 project = 'NYX Documentation'
 copyright = ''
-author = 'Kevin Battaile'
+author = ''
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -17,6 +17,10 @@ extensions = []
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+# Enable automatic figure numbering
+numfig = True
+# Optional: Define the format (default is usually just 'Figure %s')
+numfig_format = {'figure': 'Figure %s'}
 
 
 

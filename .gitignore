@@ -11,3 +11,4 @@ docs/.doctrees
 docs/.buildinfo
 .buildinfo*
 .doctrees
+_build/

@@ -1,3 +1,5 @@
+.. shipping:
+
 =======================
 Shipping Samples to NYX
 =======================
