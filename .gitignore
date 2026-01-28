@@ -1,2 +1,13 @@
+# Ignore MacOS filesystem cruft
 .DS_Store
+
+# Ignore PyCharm files
 .idea/
+
+# Ignore Sphinx build metadata
+**/_build/.buildinfo*
+**/_build/.doctrees
+docs/.doctrees
+docs/.buildinfo
+.buildinfo*
+.doctrees
