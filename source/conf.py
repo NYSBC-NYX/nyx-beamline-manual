@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'NYX Documentation'
-copyright = '2026, Kevin Battaile'
+copyright = ''
 author = 'Kevin Battaile'
 
 # -- General configuration ---------------------------------------------------
