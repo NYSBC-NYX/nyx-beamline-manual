@@ -17,7 +17,7 @@ set -e
 echo "🔨 Running Sphinx build..."
 # This generates the HTML and puts it into the /docs folder
 # Using -b html ensures it's a standard web build
-sphinx-build -b html . docs
+sphinx-build -b html source docs
 
 # 2. Ensure GitHub doesn't try to use Jekyll
 touch docs/.nojekyll
