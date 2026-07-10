@@ -33,8 +33,8 @@ You will need an sftp client.
   WinSCP package.
 
 + **Mac users:** Other options are `Termius
-  <https://termius.com/download/macos>`__
-  and `Flow <http://fivedetails.com/flow/>`__.
+  <https://termius.com/download/macos>`__, `Flow <http://fivedetails.com/flow/>`__ and
+  `Cyberduck <http://cuberduck.io>`__.
 
 + **Linux users:** Your desktop file manager likely has an sftp client
   built in.  Try typing

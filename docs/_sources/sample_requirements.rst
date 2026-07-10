@@ -13,6 +13,7 @@ Puck Requirements
 -----------------
 
 .. admonition:: Note
+   :class: important
 
    - ONLY UniPuck V1 pucks are supported.
    - No other puck types will be loaded in the robot.

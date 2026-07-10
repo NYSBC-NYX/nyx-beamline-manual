@@ -1,6 +1,5 @@
 .. acknowledgement:
 
-================
 Acknowledgements
 ================
 
@@ -38,6 +37,6 @@ The following should be included in the 'funding' section of the PDB submission 
 
 .. sourcecode:: text
 
-    Funding Organization: Office of the Director, National Instutues of Health
+    Funding Organization: Office of the Director, National Institutes of Health
     Location: United States
     Grant Number: S10OD030394

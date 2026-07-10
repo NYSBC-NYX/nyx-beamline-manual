@@ -1,0 +1,9 @@
+/* Add vertical spacing between individual rows in field lists */
+.field-list > dt {
+    padding-top: 1px !important;
+}
+
+.field-list > dd {
+    padding-top: 1px !important;
+    margin-bottom: 10px !important;
+}

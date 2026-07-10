@@ -1,6 +1,5 @@
 .. shipping:
 
-=======================
 Shipping Samples to NYX
 =======================
 
@@ -36,3 +35,17 @@ We recommend that your write in permanent marker on the outside and inside lid o
     Contact if Lost: <your name, address and phone number>
 
 If the shipping tag is separated from your dewar this information will help the carrier contact you.
+
+
+Shipment Timing
+-----------------
+
+Deliveries are typically received at the beamline by 11am, however dewars can also arrive
+in the afternoon. Do not ship your dewar the day before your experiment.  Ship your dewar so that it arrives at
+least the day before your scheduled experiment.
+
+When shipping your dewar, please be mindful of the following:
+
+- Watch the calendar for holidays and weekends. There is no guarantee that your dewar will be delivered on a holiday or weekend.  If your dewar is shipped on a Friday, it may not be delivered until Monday or Tuesday.
+
+- There is no outgoing shipping on weekends or holidays.

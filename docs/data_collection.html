@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4. Data Transfer &#8212; NYX Documentation  documentation</title>
+    <title>3. Data Collection at NYX &#8212; NYX Documentation  documentation</title>
   
   
   
@@ -41,11 +41,11 @@
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'data_transfer';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'data_collection';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="5. Acknowledgements" href="acknowledgement.html" />
-    <link rel="prev" title="3. Data Collection at NYX" href="data_collection.html" />
+    <link rel="next" title="4. Data Transfer" href="data_transfer.html" />
+    <link rel="prev" title="2. Sample Requirements" href="sample_requirements.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -159,8 +159,8 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="shipping.html">1. Shipping Samples to NYX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sample_requirements.html">2. Sample Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data_collection.html">3. Data Collection at NYX</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Data Transfer</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Data Collection at NYX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_transfer.html">4. Data Transfer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">5. Acknowledgements</a></li>
 </ul>
 
@@ -216,7 +216,7 @@
       
       
       
-      <li><a href="_sources/data_transfer.rst" target="_blank"
+      <li><a href="_sources/data_collection.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -300,7 +300,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Data Transfer</h1>
+    <h1>Data Collection at NYX</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -310,12 +310,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-data">4.1. Downloading data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sftp-client">4.1.1. SFTP Client</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-short-version">4.1.2. The Short Version</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#safety-approval-form">3.1. Safety Approval Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-information-form">3.2. User Information Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-spreadsheet">3.3. Sample Spreadsheet</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#column-descriptions">3.3.1. Column Descriptions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-data-with-globus">4.2. Accessing data with Globus</a></li>
 </ul>
             </nav>
         </div>
@@ -327,101 +327,121 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="data-transfer">
-<h1><span class="section-number">4. </span>Data Transfer<a class="headerlink" href="#data-transfer" title="Link to this heading">#</a></h1>
-<p>All user data is written to central storage. Access to your data requires
-authentication using your BNL domain account. If your BNL guest appointment
-expires, you will lose access to your data and will then have to renew your
-guest appointment.</p>
-<p>Data can be downloaded using either Globus or with sftp.</p>
-<p>NSLS-II now offers a new-and-improved Globus endpoint, conveniently accessible in your
-web browser at <a class="reference external" href="https://globus.nsls2.bnl.gov">globus.nsls2.bnl.gov</a>.</p>
-<section id="downloading-data">
-<h2><span class="section-number">4.1. </span>Downloading data<a class="headerlink" href="#downloading-data" title="Link to this heading">#</a></h2>
-<section id="sftp-client">
-<h3><span class="section-number">4.1.1. </span>SFTP Client<a class="headerlink" href="#sftp-client" title="Link to this heading">#</a></h3>
-<p>You will need an sftp client.</p>
-<ul>
-<li><p><strong>Cross-platform:</strong> <a class="reference external" href="https://filezilla-project.org/">FileZilla</a>.
-This is a free program available for Windows, Apple, and Linux.  The
-explanation below will be made using FileZilla.</p></li>
-<li><p><strong>Windows users:</strong> A popular option is <a class="reference external" href="https://winscp.net/eng/index.php">WinSCP</a>. Be careful at the WinSCP
-website.  You will see multiple pop-up adds with download links to
-other software packages.  Be careful to click on the link to the
-WinSCP package.</p></li>
-<li><p><strong>Mac users:</strong> Other options are <a class="reference external" href="https://termius.com/download/macos">Termius</a>, <a class="reference external" href="http://fivedetails.com/flow/">Flow</a> and
-<a class="reference external" href="http://cuberduck.io">Cyberduck</a>.</p></li>
-<li><p><strong>Linux users:</strong> Your desktop file manager likely has an sftp client
-built in.  Try typing
-<code class="docutils literal notranslate"><span class="pre">sftp://&lt;username&gt;&#64;sftp.nsls2.bnl.gov</span></code> into your file
-manager or create a new network drive using <code class="docutils literal notranslate"><span class="pre">ssh</span></code> and
-<code class="docutils literal notranslate"><span class="pre">sftp.nsls2.bnl.gov</span></code>.</p>
-<p><a class="reference external" href="https://github.com/libfuse/sshfs">sshfs</a> is an
-excellent solution.  <code class="docutils literal notranslate"><span class="pre">sshfs</span></code> allows you to easily
-mount the remote sftp site to a local mount point,
-allowing you to browse the remote site as if it were a
-local folder.  For example, the following can be done to mount
-the data folder locally:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sshfs<span class="w"> </span>johndoe@sftp.nsls2.bnl.gov:/nsls2/data/nyx<span class="w"> </span>~/mnt/nyx<span class="w"> </span>-o<span class="w"> </span>follow_symlinks
-</pre></div>
+  <section id="data-collection-at-nyx">
+<h1><span class="section-number">3. </span>Data Collection at NYX<a class="headerlink" href="#data-collection-at-nyx" title="Link to this heading">#</a></h1>
+<p>This section describes the data collection process at NYX. It includes information on how to prepare for your experiment,
+how to collect data, and how to troubleshoot common issues.</p>
+<div class="tip admonition">
+<p class="admonition-title">Forms</p>
+<p>Prior to the experiment, users will need to return the completed user information form as well
+as the sample spreadsheet to the beamline staff. Both forms are available to download
+from this website.</p>
 </div>
-<p>and this to unmount the data folder</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fusermount<span class="w"> </span>-u<span class="w"> </span>mnt/nyx
-</pre></div>
-</div>
-</li>
-</ul>
+<section id="safety-approval-form">
+<h2><span class="section-number">3.1. </span>Safety Approval Form<a class="headerlink" href="#safety-approval-form" title="Link to this heading">#</a></h2>
+<p>A valid safety approval form is required for all experiments at NYX and is a requirement for operation by NSLS-II.</p>
+<p>The SAF system can be accessed through the PASS website at <a class="reference external" href="https://pass.bnl.gov">PASS</a>.</p>
+<p>It is the user’s responsibility to ensure that the SAF is submitted and approved prior to the start of the experiment.
+The SAF should be submitted at least 2 weeks prior to the experiment.</p>
+<p>Users should submit an ‘Envelope SAF’ and not a ‘Standard SAF’.</p>
 </section>
-<section id="the-short-version">
-<h3><span class="section-number">4.1.2. </span>The Short Version<a class="headerlink" href="#the-short-version" title="Link to this heading">#</a></h3>
-<div class="admonition-executive-summary admonition">
-<p class="admonition-title">Executive Summary</p>
-<ol class="arabic simple">
-<li><p>Connect to sftp.nsls2.bnl.gov in your sftp client</p></li>
-<li><p>Authenticate using your BNL username/password and DUO two-factor
-authentication</p></li>
-<li><p>Navigate to <code class="docutils literal notranslate"><span class="pre">/nsls2/data/nyx/proposals/</span></code>, then to the cycle
-folder corresponding to the date of your experiment, then to the
-folder with your proposal number.  So, something like
-<code class="docutils literal notranslate"><span class="pre">/nsls2/data/nyx/proposals/2026-1/pass-123456</span></code>.</p></li>
-<li><p>Transfer your data to your local computer.</p></li>
-</ol>
-</div>
-</section>
-</section>
-<section id="accessing-data-with-globus">
-<h2><span class="section-number">4.2. </span>Accessing data with Globus<a class="headerlink" href="#accessing-data-with-globus" title="Link to this heading">#</a></h2>
-<div class="admonition-note admonition">
+<section id="user-information-form">
+<h2><span class="section-number">3.2. </span>User Information Form<a class="headerlink" href="#user-information-form" title="Link to this heading">#</a></h2>
+<p>Click here to download the <a class="reference download internal" download="" href="_downloads/c6919b643367e7a87879136a617d5efb/Remote_User_Info_NYX_v2.docx"><code class="xref download docutils literal notranslate"><span class="pre">User</span> <span class="pre">Information</span> <span class="pre">Form</span></code></a>.</p>
+<p>Please fill out the form and return it to the beamline staff prior to your experiment.</p>
+<div class="danger admonition">
 <p class="admonition-title">Note</p>
-<p>Your institution may block Globus as part of their IT policy. If this is the
-case, you will need to work with your institute IT for a policy exception.</p>
+<p>It is critical that all users that will be connecting remotely be listed on this form. This list is used
+by NYX staff to enable remote access for the users. If a user is not listed on this form, they will not be able to
+connect remotely.</p>
 </div>
-<p>If an institutional endpoint is available, Globus may be the best option
-for retrieving your data from NYX.</p>
-<p>To use Globus, you must transfer data to a Globus endpoint to which you have
-access. This endpoint can be institutionally managed or a personal endpoint on
-your computer.</p>
-<p>If you are transferring data to your computer, you will need to use
-<a class="reference external" href="https://app.globus.org/collections/gcp">Globus Connect Personal (GCP)</a>.
-Follow the download and installation instructions and start an
-instance of GCP on your computer.</p>
-<p>Once you have identified either an institutional endpoint or you have
-GCP running, point your web browser at <a class="reference external" href="http://globus.nsls2.bnl.gov/">http://globus.nsls2.bnl.gov/</a>.</p>
-<p>In the Globus file manager panel, navigate to your
-proposal directory, which will be something like
-<code class="docutils literal notranslate"><span class="pre">/nsls2/data/nyx/proposals/2026-1/pass-123456</span></code>, and
-replace <code class="docutils literal notranslate"><span class="pre">2026-1</span></code> with the operations cycle of your visit to NYX and
-replace <code class="docutils literal notranslate"><span class="pre">123456</span></code> with the proposal number of your experiment.</p>
-<figure class="align-center" id="id1">
-<img alt="_images/globus.png" class="my-5" src="_images/globus.png" />
-<figcaption>
-<p><span class="caption-number">Figure 4.1 </span><span class="caption-text">Globus navigation at NSLS-II</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>In the local panel on the right side of the page, navigate to the
-location to which you want to download your data.</p>
-<p>Select the data (or data folder) you wish to download and hit the
-start button above the remote folder.</p>
+<div class="important admonition">
+<p class="admonition-title">Note</p>
+<p>This list is also used to set directory permissions for NYSBC members. If a user is not listed, they will not be able to access the
+data collected from the experiment.</p>
+</div>
+</section>
+<section id="sample-spreadsheet">
+<h2><span class="section-number">3.3. </span>Sample Spreadsheet<a class="headerlink" href="#sample-spreadsheet" title="Link to this heading">#</a></h2>
+<p>Click here to download the <a class="reference download internal" download="" href="_downloads/9798e10687b6be47aabe0becd0e46008/nyx_spreadsheet_v1.0.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Sample</span> <span class="pre">Spreadsheet</span></code></a>.</p>
+<p>The sample spreadsheet is used to specify file and directory names, specify the location of samples in pucks
+and provide specific information for downstream processing.</p>
+<div class="important admonition">
+<p class="admonition-title">General requirements</p>
+<ul class="simple">
+<li><p>No spaces are permitted with the exception of column ‘P’.</p></li>
+<li><p>The only special characters allowed are underscores (_), hyphens (-) and periods (.).</p></li>
+<li><p>Any other alphanumeric character is allowed.</p></li>
+<li><p>The sample name in column ‘C’ must be unique for each sample in the spreadsheet.</p></li>
+<li><p>The minium columns required a A, B, C and D. All other columns are optional.</p></li>
+</ul>
+</div>
+<section id="column-descriptions">
+<h3><span class="section-number">3.3.1. </span>Column Descriptions<a class="headerlink" href="#column-descriptions" title="Link to this heading">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Col A (puckName)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of the puck in which the sample is located. This will be the base name for data
+directories during collection. The puck name must be unique for each puck in the spreadsheet.</p>
+</dd>
+<dt class="field-even">Col B (position)<span class="colon">:</span></dt>
+<dd class="field-even"><p>The position of the sample in the puck. This is a number from 1 to 16. The position must be unique
+for each sample in the puck.</p>
+</dd>
+<dt class="field-odd">Col C (sampleName)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of the sample. This will be the base name for data files during collection. The sample
+name must be unique for each sample in the spreadsheet and not exceed 25 characters.</p>
+</dd>
+<dt class="field-even">Col D (proposalNum)<span class="colon">:</span></dt>
+<dd class="field-even"><p>The proposal number assigned in PASS for the experiment. This will determine if the samples are
+available to you in the software. It is critical that you have your correct proposal number in this column.</p>
+</dd>
+<dt class="field-odd">Col E (folder)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An alternate folder name for the data. <strong>We do not recommend using this column.</strong></p>
+</dd>
+<dt class="field-even">Col F (deltaPhi)<span class="colon">:</span></dt>
+<dd class="field-even"><p>The angular increment in degrees for automated data collection.</p>
+</dd>
+<dt class="field-odd">Col G (exposure)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The exposure time in seconds for automated data collection.</p>
+</dd>
+<dt class="field-even">Col H (totalPhi)<span class="colon">:</span></dt>
+<dd class="field-even"><p>The total angular range in degrees for automated data collection.</p>
+</dd>
+<dt class="field-odd">Col I (transmission)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The percent transmission for automated data collection. This is a number between 0 and 100.</p>
+</dd>
+<dt class="field-even">Col J (targetResolution)<span class="colon">:</span></dt>
+<dd class="field-even"><p>The target resolution in Angstroms to the edge of the detector for automated data collection.
+The detector will be set at this distance.</p>
+</dd>
+<dt class="field-odd">Col K (beamSize)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The limiting aperture to be used for automated data collection. This can be 10, 20, 30, 50 or 100.
+We recommend using 20 or 30 for most samples.</p>
+</dd>
+<dt class="field-even">Col L (priority)<span class="colon">:</span></dt>
+<dd class="field-even"><p>The sample priority for automated data collection. This is a number starting at 1 for the highest
+priority. The sample with the lowest number (ie, the highest priority) will be collected first.</p>
+</dd>
+<dt class="field-odd">Col M (collectionType)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The type of data collection to be performed. This can be either ‘screen’ or ‘collect’.
+Screen will only perform the first dimension grid scan and collect will perform the full data collection.</p>
+</dd>
+<dt class="field-even">Col N (model)<span class="colon">:</span></dt>
+<dd class="field-even"><p>This is the model to be used for molecular replacement. This can either be the 4-character PDB code
+or the name of a supplied model file. If you supply a model file, only put the base name of the file in this column (ie,
+‘my_lysozyme’ and not ‘my_lysozyme.pdb’). The model file should be placed in the PDB_models directory in the proposal folder.</p>
+</dd>
+<dt class="field-odd">Col O (spaceGroup)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The space group of the crystal, if known. This should be the full H-M symbol or the numeric
+space group number. If the space group is not known, leave this column blank. <strong>Currently not supported</strong></p>
+</dd>
+<dt class="field-even">Col P (cellParameters)<span class="colon">:</span></dt>
+<dd class="field-even"><p>The unit cell parameters of the crystal, if known. This should be in the format
+‘a b c alpha beta gamma’ with a space between each parameter. If the unit cell parameters are not known, leave this
+column blank. <strong>Currently not supported</strong></p>
+</dd>
+</dl>
+</section>
 </section>
 </section>
 
@@ -437,20 +457,20 @@ start button above the remote folder.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="data_collection.html"
+       href="sample_requirements.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Data Collection at NYX</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Sample Requirements</p>
       </div>
     </a>
     <a class="right-next"
-       href="acknowledgement.html"
+       href="data_transfer.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Acknowledgements</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Data Transfer</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -470,12 +490,12 @@ start button above the remote folder.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-data">4.1. Downloading data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sftp-client">4.1.1. SFTP Client</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-short-version">4.1.2. The Short Version</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#safety-approval-form">3.1. Safety Approval Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-information-form">3.2. User Information Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-spreadsheet">3.3. Sample Spreadsheet</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#column-descriptions">3.3.1. Column Descriptions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-data-with-globus">4.2. Accessing data with Globus</a></li>
 </ul>
   </nav></div>
 

@@ -31,3 +31,6 @@ numfig_format = {'figure': 'Figure %s'}
 html_theme = "sphinx_book_theme"
 html_static_path = ['_static']
 html_logo = '_images/floor_mat.png'
+
+def setup(app):
+    app.add_css_file('custom.css')  # Add this line to include the custom CSS file
