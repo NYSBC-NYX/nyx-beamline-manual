@@ -20,7 +20,7 @@ Safety Approval Form
 
 A valid safety approval form is required for all experiments at NYX and is a requirement for operation by NSLS-II.
 
-The SAF system can be accessed through the PASS website at `PASS <https://pass.bnl.gov>`_.
+The SAF system can be accessed through the `PASS website <https://pass.bnl.gov>`_.
 
 It is the user's responsibility to ensure that the SAF is submitted and approved prior to the start of the experiment.
 The SAF should be submitted at least 2 weeks prior to the experiment.
@@ -52,7 +52,7 @@ Please fill out the form and return it to the beamline staff prior to your exper
 
 Sample Spreadsheet
 ------------------
-Click here to download the :download:`Sample Spreadsheet <_downloads/nyx_spreadsheet_v1.0.xlsx>`.
+Click here to download the :download:`Sample Spreadsheet <_downloads/nyx_spreadsheet_v2.xlsx>`.
 
 The sample spreadsheet is used to specify file and directory names, specify the location of samples in pucks
 and provide specific information for downstream processing.
@@ -60,11 +60,11 @@ and provide specific information for downstream processing.
 .. admonition:: General requirements
     :class: important
 
-    -  No spaces are permitted with the exception of column 'P'.
+    -  No spaces are permitted with the exception of columns 'P' and 'Q'.
     -  The only special characters allowed are underscores (_), hyphens (-) and periods (.).
     -  Any other alphanumeric character is allowed.
     -  The sample name in column 'C' must be unique for each sample in the spreadsheet.
-    -  The minium columns required a A, B, C and D. All other columns are optional.
+    -  The minium columns required are A, B, C and D. All other columns are optional.
 
 
 Column Descriptions
@@ -110,8 +110,11 @@ Column Descriptions
   'my_lysozyme' and not 'my_lysozyme.pdb'). The model file should be placed in the PDB_models directory in the proposal folder.
 
 :Col O (spaceGroup): The space group of the crystal, if known. This should be the full H-M symbol or the numeric
-  space group number. If the space group is not known, leave this column blank. **Currently not supported**
+  space group number. If the space group is not known, leave this column blank. This only works for autoPROC.
 
 :Col P (cellParameters): The unit cell parameters of the crystal, if known. This should be in the format
   'a b c alpha beta gamma' with a space between each parameter. If the unit cell parameters are not known, leave this
-  column blank. **Currently not supported**
+  column blank. If the cell is given in this column, the space group must also be given in column O. This only works for autoPROC.
+
+:Col Q (autoprocCommands): Any additional command line options to be passed to autoPROC. Add items exactly as they would
+  be typed on the command line.

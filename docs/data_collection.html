@@ -312,7 +312,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#safety-approval-form">3.1. Safety Approval Form</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-information-form">3.2. User Information Form</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-spreadsheet">3.3. Sample Spreadsheet</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-spreadsheet">3.3. Sample Spreadsheet</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#column-descriptions">3.3.1. Column Descriptions</a></li>
 </ul>
 </li>
@@ -340,7 +340,7 @@ from this website.</p>
 <section id="safety-approval-form">
 <h2><span class="section-number">3.1. </span>Safety Approval Form<a class="headerlink" href="#safety-approval-form" title="Link to this heading">#</a></h2>
 <p>A valid safety approval form is required for all experiments at NYX and is a requirement for operation by NSLS-II.</p>
-<p>The SAF system can be accessed through the PASS website at <a class="reference external" href="https://pass.bnl.gov">PASS</a>.</p>
+<p>The SAF system can be accessed through the <a class="reference external" href="https://pass.bnl.gov" rel="noreferrer" target="_blank">PASS website</a>.</p>
 <p>It is the user’s responsibility to ensure that the SAF is submitted and approved prior to the start of the experiment.
 The SAF should be submitted at least 2 weeks prior to the experiment.</p>
 <p>Users should submit an ‘Envelope SAF’ and not a ‘Standard SAF’.</p>
@@ -363,17 +363,17 @@ data collected from the experiment.</p>
 </section>
 <section id="sample-spreadsheet">
 <h2><span class="section-number">3.3. </span>Sample Spreadsheet<a class="headerlink" href="#sample-spreadsheet" title="Link to this heading">#</a></h2>
-<p>Click here to download the <a class="reference download internal" download="" href="_downloads/9798e10687b6be47aabe0becd0e46008/nyx_spreadsheet_v1.0.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Sample</span> <span class="pre">Spreadsheet</span></code></a>.</p>
+<p>Click here to download the <a class="reference download internal" download="" href="_downloads/ef8ed1c45e612ee481c8fb636ff56561/nyx_spreadsheet_v2.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Sample</span> <span class="pre">Spreadsheet</span></code></a>.</p>
 <p>The sample spreadsheet is used to specify file and directory names, specify the location of samples in pucks
 and provide specific information for downstream processing.</p>
 <div class="important admonition">
 <p class="admonition-title">General requirements</p>
 <ul class="simple">
-<li><p>No spaces are permitted with the exception of column ‘P’.</p></li>
+<li><p>No spaces are permitted with the exception of columns ‘P’ and ‘Q’.</p></li>
 <li><p>The only special characters allowed are underscores (_), hyphens (-) and periods (.).</p></li>
 <li><p>Any other alphanumeric character is allowed.</p></li>
 <li><p>The sample name in column ‘C’ must be unique for each sample in the spreadsheet.</p></li>
-<li><p>The minium columns required a A, B, C and D. All other columns are optional.</p></li>
+<li><p>The minium columns required are A, B, C and D. All other columns are optional.</p></li>
 </ul>
 </div>
 <section id="column-descriptions">
@@ -433,12 +433,16 @@ or the name of a supplied model file. If you supply a model file, only put the b
 </dd>
 <dt class="field-odd">Col O (spaceGroup)<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The space group of the crystal, if known. This should be the full H-M symbol or the numeric
-space group number. If the space group is not known, leave this column blank. <strong>Currently not supported</strong></p>
+space group number. If the space group is not known, leave this column blank. This only works for autoPROC.</p>
 </dd>
 <dt class="field-even">Col P (cellParameters)<span class="colon">:</span></dt>
 <dd class="field-even"><p>The unit cell parameters of the crystal, if known. This should be in the format
 ‘a b c alpha beta gamma’ with a space between each parameter. If the unit cell parameters are not known, leave this
-column blank. <strong>Currently not supported</strong></p>
+column blank. If the cell is given in this column, the space group must also be given in column O. This only works for autoPROC.</p>
+</dd>
+<dt class="field-odd">Col Q (autoprocCommands)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Any additional command line options to be passed to autoPROC. Add items exactly as they would
+be typed on the command line.</p>
 </dd>
 </dl>
 </section>
@@ -492,7 +496,7 @@ column blank. <strong>Currently not supported</strong></p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#safety-approval-form">3.1. Safety Approval Form</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-information-form">3.2. User Information Form</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-spreadsheet">3.3. Sample Spreadsheet</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-spreadsheet">3.3. Sample Spreadsheet</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#column-descriptions">3.3.1. Column Descriptions</a></li>
 </ul>
 </li>

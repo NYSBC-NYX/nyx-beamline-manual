@@ -310,7 +310,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-data">4.1. Downloading data</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-data">4.1. Downloading data</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sftp-client">4.1.1. SFTP Client</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-short-version">4.1.2. The Short Version</a></li>
 </ul>
@@ -335,28 +335,28 @@ expires, you will lose access to your data and will then have to renew your
 guest appointment.</p>
 <p>Data can be downloaded using either Globus or with sftp.</p>
 <p>NSLS-II now offers a new-and-improved Globus endpoint, conveniently accessible in your
-web browser at <a class="reference external" href="https://globus.nsls2.bnl.gov">globus.nsls2.bnl.gov</a>.</p>
+web browser at <a class="reference external" href="https://globus.nsls2.bnl.gov" rel="noreferrer" target="_blank">globus.nsls2.bnl.gov</a>.</p>
 <section id="downloading-data">
 <h2><span class="section-number">4.1. </span>Downloading data<a class="headerlink" href="#downloading-data" title="Link to this heading">#</a></h2>
 <section id="sftp-client">
 <h3><span class="section-number">4.1.1. </span>SFTP Client<a class="headerlink" href="#sftp-client" title="Link to this heading">#</a></h3>
 <p>You will need an sftp client.</p>
 <ul>
-<li><p><strong>Cross-platform:</strong> <a class="reference external" href="https://filezilla-project.org/">FileZilla</a>.
+<li><p><strong>Cross-platform:</strong> <a class="reference external" href="https://filezilla-project.org/" rel="noreferrer" target="_blank">FileZilla</a>.
 This is a free program available for Windows, Apple, and Linux.  The
 explanation below will be made using FileZilla.</p></li>
-<li><p><strong>Windows users:</strong> A popular option is <a class="reference external" href="https://winscp.net/eng/index.php">WinSCP</a>. Be careful at the WinSCP
+<li><p><strong>Windows users:</strong> A popular option is <a class="reference external" href="https://winscp.net/eng/index.php" rel="noreferrer" target="_blank">WinSCP</a>. Be careful at the WinSCP
 website.  You will see multiple pop-up adds with download links to
 other software packages.  Be careful to click on the link to the
 WinSCP package.</p></li>
-<li><p><strong>Mac users:</strong> Other options are <a class="reference external" href="https://termius.com/download/macos">Termius</a>, <a class="reference external" href="http://fivedetails.com/flow/">Flow</a> and
-<a class="reference external" href="http://cuberduck.io">Cyberduck</a>.</p></li>
+<li><p><strong>Mac users:</strong> Other options are <a class="reference external" href="https://termius.com/download/macos" rel="noreferrer" target="_blank">Termius</a>, <a class="reference external" href="http://fivedetails.com/flow/" rel="noreferrer" target="_blank">Flow</a> and
+<a class="reference external" href="http://cuberduck.io" rel="noreferrer" target="_blank">Cyberduck</a>.</p></li>
 <li><p><strong>Linux users:</strong> Your desktop file manager likely has an sftp client
 built in.  Try typing
 <code class="docutils literal notranslate"><span class="pre">sftp://&lt;username&gt;&#64;sftp.nsls2.bnl.gov</span></code> into your file
 manager or create a new network drive using <code class="docutils literal notranslate"><span class="pre">ssh</span></code> and
 <code class="docutils literal notranslate"><span class="pre">sftp.nsls2.bnl.gov</span></code>.</p>
-<p><a class="reference external" href="https://github.com/libfuse/sshfs">sshfs</a> is an
+<p><a class="reference external" href="https://github.com/libfuse/sshfs" rel="noreferrer" target="_blank">sshfs</a> is an
 excellent solution.  <code class="docutils literal notranslate"><span class="pre">sshfs</span></code> allows you to easily
 mount the remote sftp site to a local mount point,
 allowing you to browse the remote site as if it were a
@@ -402,11 +402,11 @@ for retrieving your data from NYX.</p>
 access. This endpoint can be institutionally managed or a personal endpoint on
 your computer.</p>
 <p>If you are transferring data to your computer, you will need to use
-<a class="reference external" href="https://app.globus.org/collections/gcp">Globus Connect Personal (GCP)</a>.
+<a class="reference external" href="https://app.globus.org/collections/gcp" rel="noreferrer" target="_blank">Globus Connect Personal (GCP)</a>.
 Follow the download and installation instructions and start an
 instance of GCP on your computer.</p>
 <p>Once you have identified either an institutional endpoint or you have
-GCP running, point your web browser at <a class="reference external" href="http://globus.nsls2.bnl.gov/">http://globus.nsls2.bnl.gov/</a>.</p>
+GCP running, point your web browser at <a class="reference external" href="http://globus.nsls2.bnl.gov/" rel="noreferrer" target="_blank">http://globus.nsls2.bnl.gov/</a>.</p>
 <p>In the Globus file manager panel, navigate to your
 proposal directory, which will be something like
 <code class="docutils literal notranslate"><span class="pre">/nsls2/data/nyx/proposals/2026-1/pass-123456</span></code>, and
@@ -470,7 +470,7 @@ start button above the remote folder.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-data">4.1. Downloading data</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-data">4.1. Downloading data</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sftp-client">4.1.1. SFTP Client</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-short-version">4.1.2. The Short Version</a></li>
 </ul>

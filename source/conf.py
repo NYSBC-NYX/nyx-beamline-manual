@@ -13,7 +13,7 @@ author = ''
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = ["sphinx_new_tab_link"]
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -31,6 +31,9 @@ numfig_format = {'figure': 'Figure %s'}
 html_theme = "sphinx_book_theme"
 html_static_path = ['_static']
 html_logo = '_images/floor_mat.png'
+html_theme_options = {
+    "show_toc_level": 3 }
+
 
 def setup(app):
     app.add_css_file('custom.css')  # Add this line to include the custom CSS file
