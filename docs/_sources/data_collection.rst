@@ -15,8 +15,12 @@ how to collect data, and how to troubleshoot common issues.
    from this website.
 
 
+Administrative Paperwork
+------------------------
+
+
 Safety Approval Form
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 A valid safety approval form is required for all experiments at NYX and is a requirement for operation by NSLS-II.
 
@@ -28,7 +32,7 @@ The SAF should be submitted at least 2 weeks prior to the experiment.
 Users should submit an 'Envelope SAF' and not a 'Standard SAF'.
 
 User Information Form
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 Click here to download the :download:`User Information Form <_downloads/Remote_User_Info_NYX_v2.docx>`.
 
@@ -51,7 +55,7 @@ Please fill out the form and return it to the beamline staff prior to your exper
 
 
 Sample Spreadsheet
-------------------
+~~~~~~~~~~~~~~~~~~
 Click here to download the :download:`Sample Spreadsheet <_downloads/nyx_spreadsheet_v2.xlsx>`.
 
 The sample spreadsheet is used to specify file and directory names, specify the location of samples in pucks
@@ -68,7 +72,7 @@ and provide specific information for downstream processing.
 
 
 Column Descriptions
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 
 :Col A (puckName): The name of the puck in which the sample is located. This will be the base name for data
@@ -118,3 +122,161 @@ Column Descriptions
 
 :Col Q (autoprocCommands): Any additional command line options to be passed to autoPROC. Add items exactly as they would
   be typed on the command line.
+
+
+
+Detector Geometry Calculator
+----------------------------------
+
+.. raw:: html
+
+   <div style="background: #f9f9f9; border: 1px solid #ddd; padding: 20px; border-radius: 8px; max-width: 500px; font-family: sans-serif;">
+
+       <!-- Mode Selection -->
+       <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #ccc;">
+           <label style="font-weight: bold; margin-right: 15px;">
+               <input type="radio" name="calc-mode" value="resolution" checked onchange="toggleMode()"> Calculate Resolution
+           </label>
+           <label style="font-weight: bold;">
+               <input type="radio" name="calc-mode" value="distance" onchange="toggleMode()"> Calculate Distance
+           </label>
+       </div>
+
+       <!-- Shared Inputs -->
+       <div style="margin-bottom: 12px;">
+           <label style="display: block; font-weight: bold; margin-bottom: 4px;">Photon Energy (Energy in keV):</label>
+           <input type="number" id="xray-energy" value="12.4" step="0.1" style="width: 100%; padding: 6px; box-sizing: border-box;" oninput="calculate()">
+       </div>
+       <div style="margin-bottom: 12px;">
+           <label style="display: block; font-weight: bold; margin-bottom: 4px;">Detector:</label>
+           <select id="xray-detector-select" style="width: 100%; padding: 6px; box-sizing: border-box;" onchange="handleDetectorChange()">
+               <option value="50">Generic Small (Radius: 50)</option>
+               <option value="150">Rayonix MX300 (Radius: 150)</option>
+               <option value="163.6">Eiger2 XE 16M (Radius: 163.6)</option>
+               <option value="122.3" selected>Eiger2 XE 9M (Radius: 122.3)</option>
+               <option value="224">Pilatus 6M (Radius: 224)</option>
+               <option value="other">Other (Custom Radius)</option>
+           </select>
+
+           <div id="other-radius-container" style="display: none; margin-top: 8px;">
+               <label style="display: block; font-size: 0.9em; font-weight: bold; margin-bottom: 4px;">Custom Radius (R):</label>
+               <input type="number" id="xray-radius-custom" value="100" step="1" style="width: 100%; padding: 6px; box-sizing: border-box;" oninput="calculate()">
+           </div>
+       </div>
+
+       <!-- Mode-Specific Inputs/Outputs -->
+       <div id="distance-input-container" style="margin-bottom: 12px;">
+           <label style="display: block; font-weight: bold; margin-bottom: 4px;">Crystal-to-Detector Distance (Distance in mm):</label>
+           <input type="number" id="xray-distance" value="150" step="1" style="width: 100%; padding: 6px; box-sizing: border-box;" oninput="calculate()">
+       </div>
+
+       <div id="resolution-input-container" style="margin-bottom: 12px; display: none;">
+           <label style="display: block; font-weight: bold; margin-bottom: 4px;">Target Resolution (d_min in Å):</label>
+           <input type="number" id="xray-target-resolution" value="1.5" step="0.1" style="width: 100%; padding: 6px; box-sizing: border-box;" oninput="calculate()">
+       </div>
+
+       <!-- Results Box -->
+       <div style="margin-top: 15px; padding: 10px; background: #e8f4fd; border-radius: 4px; border: 1px solid #b6d4fe;">
+           <div id="result-resolution">
+               <strong>Calculated Resolution (d_min):</strong> <span id="xray-res-result" style="font-size: 1.2em; color: #003666; font-weight: bold;">--</span> Å
+           </div>
+           <div id="result-distance" style="display: none;">
+               <strong>Required Distance (L):</strong> <span id="xray-dist-result" style="font-size: 1.2em; color: #003666; font-weight: bold;">--</span> mm
+           </div>
+           <div id="error-message" style="display: none; color: #842029; font-weight: bold;"></div>
+       </div>
+   </div>
+
+   <script>
+       function handleDetectorChange() {
+           const select = document.getElementById('xray-detector-select');
+           const customContainer = document.getElementById('other-radius-container');
+           customContainer.style.display = select.value === 'other' ? 'block' : 'none';
+           calculate();
+       }
+
+       function toggleMode() {
+           const mode = document.querySelector('input[name="calc-mode"]:checked').value;
+
+           if (mode === 'resolution') {
+               document.getElementById('distance-input-container').style.display = 'block';
+               document.getElementById('resolution-input-container').style.display = 'none';
+               document.getElementById('result-resolution').style.display = 'block';
+               document.getElementById('result-distance').style.display = 'none';
+           } else {
+               document.getElementById('distance-input-container').style.display = 'none';
+               document.getElementById('resolution-input-container').style.display = 'block';
+               document.getElementById('result-resolution').style.display = 'none';
+               document.getElementById('result-distance').style.display = 'block';
+           }
+           calculate();
+       }
+
+       function calculate() {
+           const hc = 12.3984; // keV * Angstroms
+           const E = parseFloat(document.getElementById('xray-energy').value);
+           const mode = document.querySelector('input[name="calc-mode"]:checked').value;
+           const errorDiv = document.getElementById('error-message');
+
+           // Hide error by default
+           errorDiv.style.display = 'none';
+           document.getElementById('result-resolution').style.display = mode === 'resolution' ? 'block' : 'none';
+           document.getElementById('result-distance').style.display = mode === 'distance' ? 'block' : 'none';
+
+           let R;
+           const selectVal = document.getElementById('xray-detector-select').value;
+           if (selectVal === 'other') {
+               R = parseFloat(document.getElementById('xray-radius-custom').value);
+           } else {
+               R = parseFloat(selectVal);
+           }
+
+           if (E <= 0 || R <= 0 || isNaN(E) || isNaN(R)) {
+               showError("Invalid Energy or Radius");
+               return;
+           }
+
+           const lambda = hc / E;
+
+           if (mode === 'resolution') {
+               const L = parseFloat(document.getElementById('xray-distance').value);
+               if (L <= 0 || isNaN(L)) {
+                   showError("Invalid Distance");
+                   return;
+               }
+               const thetaMax = 0.5 * Math.atan(R / L);
+               const dMin = lambda / (2 * Math.sin(thetaMax));
+               document.getElementById('xray-res-result').innerText = dMin.toFixed(4);
+
+           } else if (mode === 'distance') {
+               const dMin = parseFloat(document.getElementById('xray-target-resolution').value);
+               if (dMin <= 0 || isNaN(dMin)) {
+                   showError("Invalid Target Resolution");
+                   return;
+               }
+
+               // Check if resolution is physically possible at this energy
+               const sinTheta = lambda / (2 * dMin);
+               if (sinTheta >= 1) {
+                   showError("Resolution physically impossible at this energy (Increase Energy or Target d_min)");
+                   return;
+               }
+
+               const thetaMax = Math.asin(sinTheta);
+               const L = R / Math.tan(2 * thetaMax);
+               document.getElementById('xray-dist-result').innerText = L.toFixed(2);
+           }
+       }
+
+       function showError(msg) {
+           document.getElementById('result-resolution').style.display = 'none';
+           document.getElementById('result-distance').style.display = 'none';
+           const errorDiv = document.getElementById('error-message');
+           errorDiv.innerText = msg;
+           errorDiv.style.display = 'block';
+       }
+
+       window.onload = function() {
+           handleDetectorChange(); // Ensures correct initial state
+       };
+   </script>
