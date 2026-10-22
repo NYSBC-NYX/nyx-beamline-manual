@@ -69,8 +69,8 @@ can result in sample loss.
 
     Examples of acceptable base types.
 
-Recommended suppliers:
-~~~~~~~~~~~~~~~~~~~~~~
+Recommended suppliers
+~~~~~~~~~~~~~~~~~~~~~
 
 - `MiTeGen <https://www.mitegen.com/product/goniometer-base-styles/>`__
 - `Molecular Dimensions <https://moleculardimensions.com/en/category/magnetic-cryovials-and-cryocaps>`__
@@ -84,15 +84,15 @@ Pin length should be standard 18mm (22mm overall mounted).
 If you buy pins from MiTeGen, Molecular Dimensions or Hampton, they will come at a standard 18mm unless you
 specify something different.
 
-Recommended suppliers:
-~~~~~~~~~~~~~~~~~~~~~~
+Recommended suppliers
+~~~~~~~~~~~~~~~~~~~~~
 
 - `Hampton Research <https://hamptonresearch.com/cat-142.html>`__
 - `MiTeGen <https://www.mitegen.com/product-category/crystallography/crystal-harvesting/>`__
 - `Molecular Dimensions <https://moleculardimensions.com/en/category/loops-and-accessories>`__
 
 Sample Hygiene
--------------
+--------------
 
 Shipping Dewars
 ~~~~~~~~~~~~~~~

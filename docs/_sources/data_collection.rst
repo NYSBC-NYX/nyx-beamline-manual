@@ -1,7 +1,7 @@
 .. data_collection:
 
 Data Collection at NYX
-=================
+======================
 
 This section describes the data collection process at NYX. It includes information on how to prepare for your experiment,
 how to collect data, and how to troubleshoot common issues.
@@ -145,7 +145,7 @@ Detector Geometry Calculator
        <!-- Shared Inputs -->
        <div style="margin-bottom: 12px;">
            <label style="display: block; font-weight: bold; margin-bottom: 4px;">Photon Energy (Energy in keV):</label>
-           <input type="number" id="xray-energy" value="12.4" step="0.1" style="width: 100%; padding: 6px; box-sizing: border-box;" oninput="calculate()">
+           <input type="number" id="xray-energy" value="12.670" step="0.1" style="width: 100%; padding: 6px; box-sizing: border-box;" oninput="calculate()">
        </div>
        <div style="margin-bottom: 12px;">
            <label style="display: block; font-weight: bold; margin-bottom: 4px;">Detector:</label>

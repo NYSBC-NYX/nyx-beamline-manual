@@ -38,7 +38,7 @@ If the shipping tag is separated from your dewar this information will help the 
 
 
 Shipment Timing
------------------
+---------------
 
 Deliveries are typically received at the beamline by 11am, however dewars can also arrive
 in the afternoon. Do not ship your dewar the day before your experiment.  Ship your dewar so that it arrives at
